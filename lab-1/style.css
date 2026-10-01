@@ -1,0 +1,161 @@
+  <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fdf6ec;
+    color: #3b2f2f;
+}
+
+
+header {
+    background-color: #3b2314;
+    color: #fdf6ec;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: #f5c77e;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+section {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #3b2314;
+}
+
+section p {
+    font-size: 16px;
+    color: #5c4a3a;
+    line-height: 1.6;
+}
+
+
+#home {
+    background-color: #3b2314;
+    color: #fdf6ec;
+    padding: 80px 40px;
+}
+
+#home h2 {
+    color: #f5c77e;
+    font-size: 34px;
+}
+
+#home p {
+    color: #e0d2c0;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #e8872a;
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #cf7320;
+}
+
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #3b2314;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.price {
+    background-color: #e8872a;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+#contact {
+    background-color: #f0e4d4;
+}
+
+#contact p {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+footer {
+    background-color: #3b2314;
+    color: #e0d2c0;
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col h4 {
+    color: #f5c77e;
+    margin-bottom: 10px;
+}
+
+.col a {
+    display: block;
+    color: #e0d2c0;
+    text-decoration: none;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.col a:hover {
+    color: #fff;
+}
+
+.col p {
+    font-size: 14px;
+}
