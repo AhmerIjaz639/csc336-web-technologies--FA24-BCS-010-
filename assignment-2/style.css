@@ -132,9 +132,7 @@ header {
     color: #666;
 }
 
-/* =========================
-   4. Hero Section
-========================= */
+
 .hero {
     width: 100%;
     text-align: center;
@@ -182,9 +180,7 @@ header {
     background-color: #444;
 }
 
-/* =========================
-   5. Featured Categories
-========================= */
+
 .featured-categories,
 .shop-icons {
     padding: 36px 4%;
@@ -223,9 +219,6 @@ header {
     margin-bottom: 8px;
 }
 
-/* =========================
-   6. Shop Our Icons
-========================= */
 .product-list {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -249,9 +242,7 @@ header {
     font-size: 18px;
 }
 
-/* =========================
-   7. Footer
-========================= */
+
 footer {
     margin-top: 36px;
     padding: 40px 4% 22px;
@@ -289,9 +280,7 @@ footer > p {
     font-size: 12px;
 }
 
-/* =========================
-   8. Tablet Layout
-========================= */
+
 @media (max-width: 1000px) {
     .main-bar {
         grid-template-columns: auto 1fr auto;
@@ -319,9 +308,7 @@ footer > p {
     }
 }
 
-/* =========================
-   9. Mobile Layout
-========================= */
+
 @media (max-width: 760px) {
     #top-bar {
         padding: 10px 20px;
@@ -419,9 +406,7 @@ footer > p {
     }
 }
 
-/* =========================
-   10. Small Phones
-========================= */
+
 @media (max-width: 420px) {
     #top-bar {
         padding: 10px 14px;
