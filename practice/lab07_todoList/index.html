@@ -1,25 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ToDo List</h1>
-  </header>
 
-  <main>
-    <h2>Enter task</h2>
-    <div class="task-input">
-      <input id="taskInput" type="text" placeholder="Enter task here" aria-label="Task input">
-      <button id="addButton">Add</button>
+    <div class="todo">
+        <h1>My To-Do List</h1>
+
+        <input id="taskInput" type="text" placeholder="Enter a task">
+        <button id="addButton">Add</button>
+
+        <ul id="taskList"></ul>
     </div>
-    <ul id="taskList"></ul>
-  </main>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

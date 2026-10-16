@@ -1,42 +1,14 @@
-var taskInput = document.getElementById("taskInput");
-var addButton = document.getElementById("addButton");
-var taskList = document.getElementById("taskList");
+const taskInput=document.getElementById("taskInput");
+const addButton=document.getElementById("addButton");
+const taskList=document.getElementById("taskList");
 
-function addTask() {
-    var taskText = taskInput.value.trim();
-
-    if (taskText === "") {
-        alert("Please enter a task.");
+addButton.addEventListener("click",function(){
+    const task=taskInput.value.trim();
+    if(task===""){
         return;
     }
-
-    var listItem = document.createElement("li");
-    var task = document.createElement("span");
-    var deleteButton = document.createElement("button");
-
-    task.textContent = taskText;
-    deleteButton.textContent = "Delete";
-    deleteButton.className = "delete-button";
-
-    task.onclick = function () {
-        task.classList.toggle("completed");
-    };
-
-    deleteButton.onclick = function () {
-        listItem.remove();
-    };
-
-    listItem.appendChild(task);
-    listItem.appendChild(deleteButton);
-    taskList.appendChild(listItem);
-    taskInput.value = "";
-    taskInput.focus();
-}
-
-addButton.onclick = addTask;
-
-taskInput.onkeypress = function (event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-};
+    const li =document.createElement("li");
+    const checkbox=document.createElement("input");
+    checkbox.type="checkbox";
+    
+})
