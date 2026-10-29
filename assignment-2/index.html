@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Store | Products</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind = {
+            config: {
+                corePlugins: { preflight: false },
+                prefix: "tw-"
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header class="site-header">
@@ -107,6 +116,33 @@
                     </a>
                     <div class="product-info"><div><h3>One Luxe Top</h3><p>Women's Clothing</p></div><strong>$60</strong></div>
                     <a class="button button-dark" href="product.html">Add to Cart</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="running-essentials-section" aria-labelledby="running-essentials-heading">
+            <div class="running-essentials-heading">
+                <div>
+                    <p class="running-essentials-label">Built for movement</p>
+                    <h2 id="running-essentials-heading">Running essentials</h2>
+                </div>
+                <p>Simple choices for comfortable miles, from warm-up to cool-down.</p>
+            </div>
+            <div class="tw-grid running-essentials-grid">
+                <article>
+                    <span aria-hidden="true">01</span>
+                    <h3>Cushioned shoes</h3>
+                    <p>Lightweight support for everyday runs.</p>
+                </article>
+                <article>
+                    <span aria-hidden="true">02</span>
+                    <h3>Breathable layers</h3>
+                    <p>Comfortable pieces that keep you moving.</p>
+                </article>
+                <article>
+                    <span aria-hidden="true">03</span>
+                    <h3>Ready to go</h3>
+                    <p>Practical gear for wherever you train.</p>
                 </article>
             </div>
         </section>
