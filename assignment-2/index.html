@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Store | Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind = {
-            config: {
-                corePlugins: { preflight: false },
-                prefix: "tw-"
-            }
-        };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header class="site-header">
@@ -26,14 +18,14 @@
                 <a href="#signin">Sign In</a>
             </nav>
         </div>
-        <div class="main-bar">
+        <div class="main-bar navbar navbar-expand">
             <a class="brand" href="index.html" aria-label="Nike home">NIKE</a>
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="#new">New</a>
-                <a href="#men">Men</a>
-                <a href="#women">Women</a>
-                <a href="#kids">Kids</a>
-                <a href="#sport">Sport</a>
+            <nav class="main-nav navbar-nav" aria-label="Main navigation">
+                <a class="nav-link" href="#new">New</a>
+                <a class="nav-link" href="#men">Men</a>
+                <a class="nav-link" href="#women">Women</a>
+                <a class="nav-link" href="#kids">Kids</a>
+                <a class="nav-link" href="#sport">Sport</a>
             </nav>
             <div class="header-actions">
                 <label class="search">
@@ -120,32 +112,6 @@
             </div>
         </section>
 
-        <section class="running-essentials-section" aria-labelledby="running-essentials-heading">
-            <div class="running-essentials-heading">
-                <div>
-                    <p class="running-essentials-label">Built for movement</p>
-                    <h2 id="running-essentials-heading">Running essentials</h2>
-                </div>
-                <p>Simple choices for comfortable miles, from warm-up to cool-down.</p>
-            </div>
-            <div class="tw-grid running-essentials-grid">
-                <article>
-                    <span aria-hidden="true">01</span>
-                    <h3>Cushioned shoes</h3>
-                    <p>Lightweight support for everyday runs.</p>
-                </article>
-                <article>
-                    <span aria-hidden="true">02</span>
-                    <h3>Breathable layers</h3>
-                    <p>Comfortable pieces that keep you moving.</p>
-                </article>
-                <article>
-                    <span aria-hidden="true">03</span>
-                    <h3>Ready to go</h3>
-                    <p>Practical gear for wherever you train.</p>
-                </article>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
