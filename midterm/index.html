@@ -32,7 +32,7 @@
             <div class="header-actions">
                 <label class="search">
                     <span class="visually-hidden">Search products</span>
-                    <input type="search" placeholder="Search">
+                    <input type="search" id="header-search" placeholder="Search">
                 </label>
                 <a href="#favorites">♡</a>
                 <a href="#cart" aria-label="Shopping cart">Bag</a>
@@ -46,6 +46,12 @@
             <h1>Move in your own way.</h1>
             <p>Explore comfortable shoes and sportswear made for every day.</p>
         </section>
+
+        <div class="search-sort-bar">
+            <input type="search" id="search-input" placeholder="Search products...">
+            <button id="sort-btn" type="button">Sort by price ↑</button>
+        </div>
+
         <div class="filter-bar">
             <input type="radio" name="category" id="cat-all" checked>
             <label for="cat-all">All</label>
@@ -78,7 +84,7 @@
                         <div>
                             <h3>Air Max 90</h3>
                             <p>Men's Shoes</p>
-                        </div><strong>$130</strong>
+                        </div><strong>$1200</strong>
                     </div>
                     <a class="button button-dark" href="product.html">Add to Cart</a>
                 </article>
@@ -147,7 +153,7 @@
                     </div>
                     <a class="button button-dark" href="product.html">Add to Cart</a>
                 </article>
-                <article class="product-card" data-category="bags">
+                <article class="product-card" data-category="bag">
                     <a href="product.html">
                         <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
                             alt="Black athletic backpack">
@@ -175,7 +181,6 @@
                 </article>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
@@ -192,6 +197,8 @@
         </div>
         <p class="copyright">&copy; 2026 Nike Store Practice Page</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
