@@ -99,7 +99,8 @@ img {
     border-radius: 24px;
     font: inherit;
     padding: 11px 17px;
-    width: 145px;
+    width: 100%;
+    max-width: 200px;
 }
 
 .search input:focus {
@@ -163,7 +164,7 @@ img {
     width: 100%;
 }
 
-.product-card img:hover {
+.product-card:hover img {
     opacity: .85;
 }
 
@@ -230,38 +231,38 @@ img {
 
 .product-detail {
     display: grid;
-    gap: 7%;
-    grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+    grid-template-areas:
+        "image"
+        "details"
+        "description";
+    gap: 24px;
     padding: 20px 8% 90px;
 }
 
-.detail-image img {
-    aspect-ratio: 1 / 1;
-    background: #f2f2f2;
-    object-fit: cover;
-    width: 100%;
+.detail-image {
+    grid-area: image;
 }
 
 .detail-content {
-    padding-top: 35px;
+    grid-area: details;
 }
 
-.detail-content h1 {
-    font-size: clamp(34px, 5vw, 54px);
-    line-height: 1.1;
-    margin: 8px 0;
+.detail-description {
+    grid-area: description;
+    border-top: 1px solid #ddd;
+    padding-top: 24px;
 }
 
-.detail-price {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 30px;
+.detail-description h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
-.description {
+.detail-description p {
     color: #444;
     font-size: 16px;
-    max-width: 500px;
+    margin-bottom: 14px;
+    max-width: 800px;
 }
 
 .quantity-label {
@@ -294,7 +295,7 @@ img {
 
 .footer-links {
     display: flex;
-    gap: 75px;
+    gap: 30px;
     margin-bottom: 35px;
 }
 
@@ -317,6 +318,13 @@ img {
     padding-top: 18px;
 }
 
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
 .filter-bar input[type="radio"] {
     display: none;
 }
@@ -334,13 +342,6 @@ img {
     transform: scale(1.1);
 }
 
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
 #cat-all:checked~label[for="cat-all"],
 #cat-shoes:checked~label[for="cat-shoes"],
 #cat-bags:checked~label[for="cat-bags"],
@@ -349,15 +350,13 @@ img {
     background: hsl(70, 70%, 45%);
 }
 
-
 body:has(#cat-shoes:checked) .product-card:not([data-category="shoes"]) {
     display: none;
 }
 
-body:has(#cat-bags:checked) .product-card:not([data-category="bag"]) {
+body:has(#cat-bags:checked) .product-card:not([data-category="bags"]) {
     display: none;
 }
-
 
 body:has(#cat-clothes:checked) .product-card:not([data-category="clothes"]) {
     display: none;
@@ -372,17 +371,9 @@ body:has(#cat-all:checked) .product-card {
 }
 
 @media (max-width: 900px) {
-    .main-bar {
-        grid-template-columns: auto 1fr auto;
-    }
-
     .main-nav {
         gap: 15px;
         justify-content: center;
-    }
-
-    .search input {
-        width: 110px;
     }
 
     .product-grid {
@@ -395,7 +386,7 @@ body:has(#cat-all:checked) .product-card {
     }
 }
 
-@media (max-width: 610px) {
+@media (min-width: 610px) {
     .utility-bar {
         align-items: flex-start;
         flex-wrap: wrap;
@@ -440,13 +431,24 @@ body:has(#cat-all:checked) .product-card {
     }
 
     .product-detail {
-        gap: 25px;
-        grid-template-columns: 1fr;
-        padding: 10px 20px 60px;
+        grid-template-areas:
+            "image   details"
+            "description description";
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+        align-items: start;
+        padding: 20px 5% 70px;
     }
 
     .detail-content {
-        padding-top: 0;
+        position: sticky;
+        top: 90px;
+        background: #fff;
+        padding: 10px 0;
+    }
+
+    .detail-description p {
+        max-width: 720px;
     }
 
     .breadcrumb {
@@ -457,12 +459,10 @@ body:has(#cat-all:checked) .product-card {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
+
+    .footer-links {
+        gap: 75px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -495,7 +495,7 @@ body:has(#cat-all:checked) .product-card {
 
     .search input {
         padding: 9px 10px;
-        width: 88px;
+        max-width: 110px;
     }
 
     .header-actions {
