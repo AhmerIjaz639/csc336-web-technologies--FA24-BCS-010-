@@ -1,11 +1,9 @@
-const http = require("http");
+const express=require('express');
+const app=express();
 
-const server = http.createServer((req, res) => {
-  const body = JSON.stringify({ message: "Hello from Node!" });
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(body);
-});
-
-server.listen(3001, () => {
+app.get('/',(req,res)=>{
+  res.json({message:"Hello from Node with express which is built on http"});
+})
+app.listen(3001, () => {
   console.log("Listening on http://localhost:3001");
 });
