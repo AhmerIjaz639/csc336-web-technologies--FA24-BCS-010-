@@ -24,3 +24,10 @@ The layout uses media queries for desktop, tablet, and phone widths. The product
 ## Completion screenshots
 
 Take screenshots of both pages at approximately 375px, 768px, and desktop width and include them in the completion PDF.
+
+
+
+check this commit for history
+
+
+ https://github.com/AhmerIjaz639/csc336-web-technologies--FA24-BCS-010-/commit/ab585e057d08e4b12c8a444260f39e1be93044c4#diff-d9289a834fd0a726a23501d7e35433cba3b1d1aa7f85d3d6dd1709b6ad691143
