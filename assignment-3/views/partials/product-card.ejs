@@ -1,0 +1,16 @@
+<article class="product-card" data-category="<%= product.category %>">
+    <a href="/product/<%= product.id %>">
+        <img src="<%= product.image %>" alt="<%= product.alt %>">
+    </a>
+    <div class="product-info">
+        <div>
+            <h3><%= product.name %></h3>
+            <p><%= product.subtitle %></p>
+        </div>
+        <strong>$<%= product.price %></strong>
+    </div>
+    <button class="button button-dark add-to-cart" type="button"
+        data-product-id="<%= product.id %>" data-product-name="<%= product.name %>">
+        Add to Cart
+    </button>
+</article>

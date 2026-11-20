@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+</head>
+<body>
+    <%- include("partials/header") %>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Nike Running</p>
+            <h1>Move in your own way.</h1>
+            <p>Explore comfortable shoes and sportswear made for every day.</p>
+        </section>
+
+        <div class="search-sort-bar">
+            <input type="search" id="search-input" placeholder="Search products...">
+            <button id="sort-btn" type="button">Sort by price ↑</button>
+        </div>
+
+        <div class="filter-bar">
+            <input type="radio" name="category" id="cat-all" checked>
+            <label for="cat-all">All</label>
+
+            <input type="radio" name="category" id="cat-shoes">
+            <label for="cat-shoes">Shoes</label>
+
+            <input type="radio" name="category" id="cat-bags">
+            <label for="cat-bags">Bags</label>
+
+            <input type="radio" name="category" id="cat-hoddies">
+            <label for="cat-hoddies">Hoddies</label>
+
+            <input type="radio" name="category" id="cat-clothes">
+            <label for="cat-clothes">Clothes</label>
+        </div>
+
+        <section class="products-section" aria-labelledby="products-heading">
+            <div class="section-heading">
+                <h2 id="products-heading">Featured products</h2>
+                <p><%= products.length %> products</p>
+            </div>
+            <div class="product-grid">
+                <% products.forEach((product) => { %>
+                    <%- include("partials/product-card", { product }) %>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+    <script src="/js/script.js"></script>
+</body>
+</html>

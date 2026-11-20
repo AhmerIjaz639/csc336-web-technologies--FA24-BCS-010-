@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+</head>
+<body>
+    <%- include("partials/header") %>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Products</a><span>/</span><span><%= product.name %></span>
+        </div>
+
+        <section class="product-detail">
+            <div class="detail-image">
+                <img src="<%= product.image.replace('w=700', 'w=1000') %>" alt="<%= product.alt %>">
+            </div>
+
+            <div class="detail-content">
+                <p class="eyebrow">Nike Running</p>
+                <h1><%= product.name %></h1>
+                <p class="detail-price">$<%= product.price %></p>
+
+                <label class="quantity-label" for="quantity">Quantity</label>
+                <select id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button class="button button-dark button-large add-to-cart" type="button"
+                    data-product-id="<%= product.id %>" data-product-name="<%= product.name %>">
+                    Add to Cart
+                </button>
+                <p class="delivery-note">Free delivery and returns on all orders.</p>
+            </div>
+
+            <div class="detail-description">
+                <h2>Description</h2>
+                <p>The <%= product.name %> delivers comfort and a bold look for everyday movement. Its cushioned design and durable sole help you stay ready for whatever the day brings.</p>
+                <p>The stitched details and carefully selected materials stay true to Nike's performance heritage, while updated construction delivers comfort all day long.</p>
+                <p>Lightweight cushioning provides support and a bold look that works across generations of sneaker and sportswear culture.</p>
+                <p>Whether you are heading out for a workout, running errands, or meeting friends, this piece moves with you and works with a variety of outfits.</p>
+                <p>Pair it with joggers, jeans, or shorts for an easy everyday look. Its timeless silhouette makes it a staple in any collection.</p>
+                <p>Free delivery and returns are available on all orders. Try it at home and send it back if the fit is not right.</p>
+            </div>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+    <script src="/js/script.js"></script>
+</body>
+</html>
